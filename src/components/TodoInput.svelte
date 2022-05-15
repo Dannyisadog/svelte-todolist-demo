@@ -20,12 +20,14 @@
     justify-content: center;
   }
   #todo-input {
-    width: 400px;
+    width: 100%;
     height: 30px;
   }
   .create-item-btn {
     margin-left: 10px;
-    width: 80px;
+    width: 30%;
+    max-width: 80px;
+    min-width: 60px;
     color: white;
     background-color: #1b51b4;
     border: 0;

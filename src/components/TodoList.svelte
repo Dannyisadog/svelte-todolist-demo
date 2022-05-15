@@ -54,7 +54,11 @@
   main {
     display: flex;
     justify-content: space-between;
-    width: 500px;
+    width: 90vw;
+    max-width: 500px;
     margin: 0 auto;
+  }
+  .todo-input-wrapper {
+    width: 100%;
   }
 </style>
