@@ -6,7 +6,10 @@
   <div class="item-wrapper">
     <div class="todo-value {item.done && 'done'}">{item.value}</div>
     <div class="action-button-wrapper">
-      <div class="done-button action-button" on:click={updateItem(item.id)}>
+      <div
+        class="done-button action-button {item.done && 'done'}"
+        on:click={!item.done && updateItem(item.id)}
+      >
         V
       </div>
       <div class="delete-button action-button" on:click={deleteItem(item.id)}>
@@ -31,6 +34,7 @@
   }
   .todo-value.done {
     text-decoration: line-through;
+    color: #bcbcbc;
   }
   .action-button-wrapper {
     display: flex;
@@ -49,8 +53,18 @@
     justify-content: center;
     transition: 0.3s;
   }
+  .action-button.hidden {
+    display: none;
+  }
   .done-button {
     background-color: #18d288;
+  }
+  .done-button.done {
+    background-color: #a8a8a8;
+    cursor: not-allowed;
+  }
+  .done-button.done:hover {
+    background-color: #a8a8a8;
   }
   .done-button:hover {
     background-color: #11a167;
